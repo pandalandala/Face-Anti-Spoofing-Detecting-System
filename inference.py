@@ -4,6 +4,7 @@ import os
 import models
 import face_alignment
 from skimage import io
+from PIL import Image
 from torch.autograd import Variable
 from torchnet import meter
 from utils import Visualizer
@@ -26,8 +27,9 @@ class DataHandle():
         else:
             self.fa = face_alignment.FaceAlignment(face_alignment.LandmarksType.TWO_D, flip_input=False,device='cpu')
 
-    def det_img(self,imgdir):
+    def det_img(self, imgdir):
         input = io.imread(imgdir)
+        input = input[:, :, :3]
         preds = self.fa.get_landmarks(input)
         if 0:
             for pred in preds:
@@ -40,7 +42,7 @@ class DataHandle():
                 cv2.imshow('-',img)
                 cv2.waitKey()
         return preds
-    def crop_with_ldmk(self,image, landmark):
+    def crop_with_ldmk(self, image, landmark):
         ct_x, std_x = landmark[:,0].mean(), landmark[:,0].std()
         ct_y, std_y = landmark[:,1].mean(), landmark[:,1].std()
 
@@ -115,7 +117,7 @@ def inference(**kwargs):
         data = torch.FloatTensor(data)
         with torch.no_grad():
             if opt.use_gpu:
-                data =  data.cuda()
+                data = data.cuda()
             outputs = model(data)
             outputs = torch.softmax(outputs,dim=-1)
             preds = outputs.to('cpu').numpy()

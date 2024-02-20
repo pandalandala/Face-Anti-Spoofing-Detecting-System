@@ -1,2 +1,5 @@
 /checkpoints/
 /raw/
+/detlandmark/inference_images/
+
+result/inference.txt
