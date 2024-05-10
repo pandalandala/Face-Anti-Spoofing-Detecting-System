@@ -23,6 +23,7 @@ import numpy as np
 import pickle
 import roc
 import cv2
+
 def blur(img):
     img = img.filter(ImageFilter.GaussianBlur(radius=random.random()))
     return img
@@ -228,6 +229,7 @@ def train(**kwargs):
 			print('Epoch: {:d} Val Loss: {:.8f} Acc: {:.4f} EER: {:.6f} TPR(1.0%): {:.6f} TPR(.5%): {:.6f} AUC: {:.8f}'.format(epoch,v_loss,v_accuracy,eer, tprs["TPR(1.%)"], tprs["TPR(.5%)"], auc))
 		#model.load_state_dict(best_model_wts)	
 	print('Best val Epoch: {},Best val TPR: {:4f}'.format(best_tpr_epoch,best_tpr))
+
 def val(model,dataloader,data_len):
 	# 把模型设为验证模式
 	criterion = FocalLoss(2)
@@ -266,7 +268,6 @@ def val(model,dataloader,data_len):
 	val_loss = running_loss / data_len
 	val_accuracy = running_corrects.double() / float(data_len)
 	return confusion_matrix, val_loss,val_accuracy,metric
-
 
 def test(**kwargs):
 	import glob

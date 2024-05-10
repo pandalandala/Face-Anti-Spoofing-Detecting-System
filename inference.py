@@ -123,7 +123,7 @@ def inference(**kwargs):
             preds = outputs.to('cpu').numpy()
             attack_prob = preds[:,opt.ATTACK]
             tqbar.set_description(desc = 'Inference %s attack_prob=%f with %s'%(imgdir, attack_prob, opt.model))
-            print('Inference %s attack_prob=%f'%(imgdir, attack_prob),file=fopen)
+            print('%s attack_prob=%f'%(imgdir, attack_prob),file=fopen)
     fopen.close()
 def help():
     '''
