@@ -27,9 +27,9 @@
 ![alt text](https://github.com/JinghuiZhou/awesome_face_antispoofing/blob/master/pipeline.png "Our Pipeline")
 ## Training
 - First, edit file *config.py*, choose the target network and proper batch_size.
-- Then, in terminal command: `make clean&&make&&python3 main.py train`
+- Then, in terminal command: `make clean && make && python main.py train`
 ## Inference
-- In terminal command: `python3 inference.py inference --images='detlandmark/inference_images/*.jpg'`
+- In terminal command: `python inference.py inference --images='detlandmark/inference_images/*.jpg' --mymodel='model.txt'`
 - The inference report is result/inference.txt, you can check it in commad: `cat result/inference.txt`
 ## Visualize Dataset
 - We have fixed the bug of choice wrong face in multiple detected faces with standard of coordinates. 

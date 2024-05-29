@@ -14,8 +14,16 @@ import torchvision
 import torch
 from torchsummary import summary
 import json
-import numpy as np
+
+import os
+import subprocess
+import time
+
 import cv2
+import gradio as gr
+from PIL import Image
+import numpy as np
+
 class DataHandle():
 
     def __init__(self,scale=2.7,image_size=224,use_gpu=False,transform=None,data_source = None):
@@ -91,26 +99,28 @@ class DataHandle():
 def inference(**kwargs):
     import glob
     images = glob.glob(kwargs['images'])
+    with open(kwargs['mymodel'], "r") as file:
+        mymodel = file.read()
     assert len(images)>0
     data_handle = DataHandle(
                         scale = opt.cropscale,
                         use_gpu = opt.use_gpu,
 			transform = None,
 			data_source='none')
-    pths = glob.glob('checkpoints/%s/*.pth'%(opt.model))
+    pths = glob.glob('checkpoints/%s/*.pth'%(mymodel))
     pths.sort(key=os.path.getmtime,reverse=True)
     print(pths)
     opt.parse(kwargs)
     # 模型
     opt.load_model_path=pths[0]
-    model = getattr(models, opt.model)().eval()
+    model = getattr(models, mymodel)().eval()
     assert os.path.exists(opt.load_model_path)
     if opt.load_model_path:
        model.load(opt.load_model_path)
     if opt.use_gpu: model.cuda()
     model.train(False)
     fopen = open('result/inference.txt','w')
-    tqbar = tqdm(enumerate(images),desc='Inference with %s'%(opt.model))
+    tqbar = tqdm(enumerate(images),desc='Inference with %s'%(mymodel))
     for idx,imgdir in tqbar:
         data,_ = data_handle.get_data(imgdir)
         data = data[np.newaxis,:]
@@ -123,8 +133,10 @@ def inference(**kwargs):
             preds = outputs.to('cpu').numpy()
             attack_prob = preds[:,opt.ATTACK]
             tqbar.set_description(desc = 'Inference %s attack_prob=%f with %s'%(imgdir, attack_prob, opt.model))
-            print('%s attack_prob=%f'%(imgdir, attack_prob),file=fopen)
+            print('Inference %s attack_prob=%f'%(imgdir, attack_prob),file=fopen)
+            text='Inference %s attack_prob=%f' % (imgdir, attack_prob)
     fopen.close()
+    return text
 def help():
     '''
     打印帮助的信息： python file.py help
@@ -146,5 +158,46 @@ def help():
 
 
 if __name__=='__main__':
-    import fire
-    fire.Fire()
+
+    def detect(image, mymodel):
+
+        save_path = "detlandmark/inference_images/0.jpg"
+        cv2.imwrite(save_path, image)
+
+        with open("model.txt", "w") as file:
+            file.write(mymodel)
+
+        # command = "python inference.py inference --images='detlandmark/inference_images/*.jpg'"
+        # # 使用 subprocess 启动新的命令行并运行命令
+        # process = subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
+        # # 等待命令行命令执行完成
+        # process.wait()
+
+        # 灰度
+        grey = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+        import fire
+        text = fire.Fire()
+
+        with open('result/inference.txt', 'r') as file:
+            output = file.read()
+        return grey, output
+
+    inputs = [gr.Image(), gr.Radio(["MyresNet18", "MyresNet34", "MyresNet50", "MyVggNet11", "MyVggNet13", "MyVggNet16", "Myxception", "MydetNet59"])]
+    outputs = [gr.Image(), "text"]
+
+    interface = gr.Interface(fn=detect,
+                             inputs=inputs,
+                             outputs=outputs,
+                             # live=True,
+                             title="FAS Detection System")
+
+    img_path = "detlandmark/inference_images/"
+    for filename in os.listdir(img_path):
+        file_path = os.path.join(img_path, filename)
+        # 如果是文件，则直接删除
+        if os.path.isfile(file_path):
+            os.remove(file_path)
+            print(f"已删除文件: {file_path}")
+
+    interface.launch()

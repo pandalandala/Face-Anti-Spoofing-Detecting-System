@@ -1,0 +1,10 @@
+Inference detlandmark/inference_images\0.jpg attack_prob=0.904572
+Inference detlandmark/inference_images\1.jpg attack_prob=0.891842
+Inference detlandmark/inference_images\2.jpg attack_prob=0.962956
+Inference detlandmark/inference_images\3.jpg attack_prob=0.994967
+Inference detlandmark/inference_images\4.jpg attack_prob=0.931356
+Inference detlandmark/inference_images\5.jpg attack_prob=0.864679
+Inference detlandmark/inference_images\6.jpg attack_prob=0.972445
+Inference detlandmark/inference_images\7.jpg attack_prob=0.992569
+Inference detlandmark/inference_images\8.jpg attack_prob=0.944587
+Inference detlandmark/inference_images\9.jpg attack_prob=0.988218

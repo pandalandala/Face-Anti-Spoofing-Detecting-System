@@ -1,0 +1,65 @@
+Date : 2024-05-17 09:56:51
+Directory : d:\Desktop\Face Anti-Spoofing Detecting System
+Total : 29 files,  2708 codes, 317 comments, 594 blanks, all 3619 lines
+
+Languages
++--------------+------------+------------+------------+------------+------------+
+| language     | files      | code       | comment    | blank      | total      |
++--------------+------------+------------+------------+------------+------------+
+| Python       |         21 |      2,582 |        316 |        586 |      3,484 |
+| Markdown     |          1 |         64 |          0 |          5 |         69 |
+| XML          |          5 |         39 |          0 |          0 |         39 |
+| Shell Script |          1 |         18 |          1 |          1 |         20 |
+| Makefile     |          1 |          5 |          0 |          2 |          7 |
++--------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                          | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                             |         29 |      2,708 |        317 |        594 |      3,619 |
+| . (Files)                                                                                     |         11 |        838 |        137 |        137 |      1,112 |
+| .idea                                                                                         |          5 |         39 |          0 |          0 |         39 |
+| .idea (Files)                                                                                 |          4 |         33 |          0 |          0 |         33 |
+| .idea\inspectionProfiles                                                                      |          1 |          6 |          0 |          0 |          6 |
+| data                                                                                          |          3 |        206 |         33 |         38 |        277 |
+| detlandmark                                                                                   |          3 |        195 |         12 |         27 |        234 |
+| models                                                                                        |          5 |      1,313 |        122 |        377 |      1,812 |
+| utils                                                                                         |          2 |        117 |         13 |         15 |        145 |
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------+--------------+------------+------------+------------+------------+
+| filename                                                                                      | language     | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------+--------------+------------+------------+------------+------------+
+| d:\Desktop\Face Anti-Spoofing Detecting System\.idea\awesome_face_antispoofing-master.iml     | XML          |         12 |          0 |          0 |         12 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\.idea\inspectionProfiles\profiles_settings.xml | XML          |          6 |          0 |          0 |          6 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\.idea\misc.xml                                 | XML          |          7 |          0 |          0 |          7 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\.idea\modules.xml                              | XML          |          8 |          0 |          0 |          8 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\.idea\vcs.xml                                  | XML          |          6 |          0 |          0 |          6 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\Makefile                                       | Makefile     |          5 |          0 |          2 |          7 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\README.md                                      | Markdown     |         64 |          0 |          5 |         69 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\config.py                                      | Python       |         43 |          6 |         11 |         60 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\data\__init__.py                               | Python       |          1 |          0 |          0 |          1 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\data\make test_img.py                          | Python       |         69 |         22 |         18 |        109 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\data\require_dataset.py                        | Python       |        136 |         11 |         20 |        167 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\detlandmark\crop.py                            | Python       |        148 |          9 |         23 |        180 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\detlandmark\detlandmark.py                     | Python       |         19 |          2 |          2 |         23 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\detlandmark\detlandmark_imgs.py                | Python       |         28 |          1 |          2 |         31 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\gradiolaunch.py                                | Python       |         32 |         58 |         12 |        102 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\inference.py                                   | Python       |        165 |         10 |         29 |        204 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\install_requirements.sh                        | Shell Script |         18 |          1 |          1 |         20 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\loss.py                                        | Python       |         69 |          7 |         17 |         93 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\main.py                                        | Python       |        287 |         39 |         29 |        355 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\make.py                                        | Python       |         14 |          0 |          2 |         16 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\models\BasicModule.py                          | Python       |        438 |          4 |         80 |        522 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\models\__init__.py                             | Python       |         18 |          0 |          1 |         19 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\models\detnet.py                               | Python       |        218 |        100 |         88 |        406 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\models\nasnet.py                               | Python       |        483 |          8 |        156 |        647 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\models\xception.py                             | Python       |        156 |         10 |         52 |        218 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\roc.py                                         | Python       |         28 |          2 |         17 |         47 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\utils\Visualizer.py                            | Python       |        116 |         13 |         15 |        144 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\utils\__init__.py                              | Python       |          1 |          0 |          0 |          1 |
+| d:\Desktop\Face Anti-Spoofing Detecting System\vis_cropface.py                                | Python       |        113 |         14 |         12 |        139 |
+| Total                                                                                         |              |      2,708 |        317 |        594 |      3,619 |
++-----------------------------------------------------------------------------------------------+--------------+------------+------------+------------+------------+
