@@ -1,0 +1,31 @@
+"filename", "language", "Python", "Makefile", "Markdown", "Shell Script", "XML", "comment", "blank", "total"
+"d:\Desktop\Face Anti-Spoofing Detecting System\.idea\awesome_face_antispoofing-master.iml", "XML", 0, 0, 0, 0, 12, 0, 0, 12
+"d:\Desktop\Face Anti-Spoofing Detecting System\.idea\inspectionProfiles\profiles_settings.xml", "XML", 0, 0, 0, 0, 6, 0, 0, 6
+"d:\Desktop\Face Anti-Spoofing Detecting System\.idea\misc.xml", "XML", 0, 0, 0, 0, 7, 0, 0, 7
+"d:\Desktop\Face Anti-Spoofing Detecting System\.idea\modules.xml", "XML", 0, 0, 0, 0, 8, 0, 0, 8
+"d:\Desktop\Face Anti-Spoofing Detecting System\.idea\vcs.xml", "XML", 0, 0, 0, 0, 6, 0, 0, 6
+"d:\Desktop\Face Anti-Spoofing Detecting System\Makefile", "Makefile", 0, 5, 0, 0, 0, 0, 2, 7
+"d:\Desktop\Face Anti-Spoofing Detecting System\README.md", "Markdown", 0, 0, 64, 0, 0, 0, 5, 69
+"d:\Desktop\Face Anti-Spoofing Detecting System\config.py", "Python", 43, 0, 0, 0, 0, 6, 11, 60
+"d:\Desktop\Face Anti-Spoofing Detecting System\data\__init__.py", "Python", 1, 0, 0, 0, 0, 0, 0, 1
+"d:\Desktop\Face Anti-Spoofing Detecting System\data\make test_img.py", "Python", 69, 0, 0, 0, 0, 22, 18, 109
+"d:\Desktop\Face Anti-Spoofing Detecting System\data\require_dataset.py", "Python", 136, 0, 0, 0, 0, 11, 20, 167
+"d:\Desktop\Face Anti-Spoofing Detecting System\detlandmark\crop.py", "Python", 148, 0, 0, 0, 0, 9, 23, 180
+"d:\Desktop\Face Anti-Spoofing Detecting System\detlandmark\detlandmark.py", "Python", 19, 0, 0, 0, 0, 2, 2, 23
+"d:\Desktop\Face Anti-Spoofing Detecting System\detlandmark\detlandmark_imgs.py", "Python", 28, 0, 0, 0, 0, 1, 2, 31
+"d:\Desktop\Face Anti-Spoofing Detecting System\gradiolaunch.py", "Python", 32, 0, 0, 0, 0, 58, 12, 102
+"d:\Desktop\Face Anti-Spoofing Detecting System\inference.py", "Python", 165, 0, 0, 0, 0, 10, 29, 204
+"d:\Desktop\Face Anti-Spoofing Detecting System\install_requirements.sh", "Shell Script", 0, 0, 0, 18, 0, 1, 1, 20
+"d:\Desktop\Face Anti-Spoofing Detecting System\loss.py", "Python", 69, 0, 0, 0, 0, 7, 17, 93
+"d:\Desktop\Face Anti-Spoofing Detecting System\main.py", "Python", 287, 0, 0, 0, 0, 39, 29, 355
+"d:\Desktop\Face Anti-Spoofing Detecting System\make.py", "Python", 14, 0, 0, 0, 0, 0, 2, 16
+"d:\Desktop\Face Anti-Spoofing Detecting System\models\BasicModule.py", "Python", 438, 0, 0, 0, 0, 4, 80, 522
+"d:\Desktop\Face Anti-Spoofing Detecting System\models\__init__.py", "Python", 18, 0, 0, 0, 0, 0, 1, 19
+"d:\Desktop\Face Anti-Spoofing Detecting System\models\detnet.py", "Python", 218, 0, 0, 0, 0, 100, 88, 406
+"d:\Desktop\Face Anti-Spoofing Detecting System\models\nasnet.py", "Python", 483, 0, 0, 0, 0, 8, 156, 647
+"d:\Desktop\Face Anti-Spoofing Detecting System\models\xception.py", "Python", 156, 0, 0, 0, 0, 10, 52, 218
+"d:\Desktop\Face Anti-Spoofing Detecting System\roc.py", "Python", 28, 0, 0, 0, 0, 2, 17, 47
+"d:\Desktop\Face Anti-Spoofing Detecting System\utils\Visualizer.py", "Python", 116, 0, 0, 0, 0, 13, 15, 144
+"d:\Desktop\Face Anti-Spoofing Detecting System\utils\__init__.py", "Python", 1, 0, 0, 0, 0, 0, 0, 1
+"d:\Desktop\Face Anti-Spoofing Detecting System\vis_cropface.py", "Python", 113, 0, 0, 0, 0, 14, 12, 139
+"Total", "-", 2582, 5, 64, 18, 39, 317, 594, 3619
